@@ -22,9 +22,10 @@ public class NotificationSystemPage extends BasicPage {
 	public String getMessageString() {
 		return getMessageElement().getText();
 	}
-	
+
 	public void waitForElement() {
-		wait.until(ExpectedConditions.presenceOfElementLocated((By.xpath("//*[contains(@class, 'system_message')][contains(@style,'display: none')]"))));
+		wait.until(ExpectedConditions.presenceOfElementLocated(
+				(By.xpath("//*[contains(@class, 'system_message')][contains(@style,'display: none')]"))));
 
 	}
 }

@@ -11,21 +11,18 @@ public class AuthPage extends BasicPage {
 		// TODO Auto-generated constructor stub
 	}
 
-	public WebElement getAuthIcon()
-	{
+	public WebElement getAuthIcon() {
 		return driver.findElement(By.className("filled"));
 	}
-	
-	public WebElement getMyAccountField()
-	{
+
+	public WebElement getMyAccountField() {
 		return driver.findElement(By.partialLinkText("My Account"));
 	}
-	
-	public WebElement getLogoutField()
-	{
+
+	public WebElement getLogoutField() {
 		return driver.findElement(By.partialLinkText("Logout"));
 	}
-	
+
 	public void userLogout() {
 		getAuthIcon().click();
 		getLogoutField().click();

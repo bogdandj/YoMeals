@@ -5,31 +5,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasicPage {
-	
+
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
 
-	public WebElement getLoginButton()
-	{
+	public WebElement getLoginButton() {
 		return driver.findElement(By.className("filled"));
 	}
-	
-	public WebElement getUsername() 
-	{
+
+	public WebElement getUsername() {
 		return driver.findElement(By.name("username"));
 	}
-	
-	public WebElement getPassword()
-	{
+
+	public WebElement getPassword() {
 		return driver.findElement(By.name("password"));
 	}
 
-	public WebElement getSubmitButton()
-	{
+	public WebElement getSubmitButton() {
 		return driver.findElement(By.name("btn_submit"));
 	}
-	
+
 	public void loginAction(String name, String password) {
 		getLoginButton().click();
 		getUsername().clear();
@@ -38,6 +34,5 @@ public class LoginPage extends BasicPage {
 		getPassword().sendKeys(password);
 		getSubmitButton().click();
 	}
-
 
 }

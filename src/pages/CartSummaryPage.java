@@ -10,12 +10,11 @@ public class CartSummaryPage extends BasicPage {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-	
-	public WebElement getClearAllButton()
-	{
+
+	public WebElement getClearAllButton() {
 		return driver.findElement(By.partialLinkText("Clear All"));
 	}
-	
+
 	public void ClearAllInCart() {
 		getClearAllButton().click();
 	}
