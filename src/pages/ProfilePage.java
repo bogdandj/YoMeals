@@ -1,6 +1,7 @@
 package pages;
 
 import java.io.File;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -64,14 +65,12 @@ public class ProfilePage extends BasicPage {
 	}
 
 	public void uploadImage() throws IOException {
-		js.executeScript(
-			    "HTMLInputElement.prototype.click = function() {                     " +
-			    	    "  if(this.type !== 'file') HTMLElement.prototype.click.call(this);  " +
-			    	    "};                                                                  " );
+		js.executeScript("HTMLInputElement.prototype.click = function() {                     "
+				+ "  if(this.type !== 'file') HTMLElement.prototype.click.call(this);  "
+				+ "};                                                                  ");
 		js.executeScript("arguments[0].click()", this.getUploadButton());
 		String imgPath = new File("img\\Crna.png").getCanonicalPath();
 
-		
 		driver.findElement(By.xpath("//input[@type='file']")).sendKeys(imgPath);
 	}
 
