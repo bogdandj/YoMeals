@@ -1,14 +1,8 @@
 package tests;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class ProfileTest extends BasicTest {
@@ -26,7 +20,6 @@ public class ProfileTest extends BasicTest {
 
 		Assert.assertTrue(notificationSystemPage.getMessageString().contains("Login Successfull"),
 				"[ERROR] Login isn't successfull");
-		
 
 		this.driver.navigate().to(baseUrl + "member/profile");
 

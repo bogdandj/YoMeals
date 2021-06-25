@@ -88,12 +88,12 @@ public class MealItemTest extends BasicTest {
 			mealsPage.addQuantity(qty);
 
 			sa.assertTrue(notificationSystemPage.getMessageString().contains("Meal Added To Cart"),
-					"Login isn't successfull");
+					"[ERROR] Meals hasn'b been added to card.");
 
 		}
 		cartSummaryPage.ClearAllInCart();
 		sa.assertTrue(notificationSystemPage.getMessageString().contains("All meals removed from Cart successfully"),
-				"Login isn't successfull");
+				"[ERROR] Meals are not removed to cart.");
 	}
 
 }
